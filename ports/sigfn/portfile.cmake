@@ -17,7 +17,7 @@ vcpkg_cmake_install()
 file(INSTALL
     "${CMAKE_CURRENT_LIST_DIR}/sigfn-config.cmake"
     "${CMAKE_CURRENT_LIST_DIR}/sigfn-targets.cmake"
-    DESTINATION "${CURRENT_PACKAGES_DIR}/share/sigfn"
+    DESTINATION "share/sigfn"
 )
 
 vcpkg_fixup_cmake_targets(CONFIG_PATH share/sigfn TARGET_PATH share/sigfn)
