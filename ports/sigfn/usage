@@ -1,0 +1,11 @@
+sigfn can be found using find_package:
+
+    find_package(sigfn CONFIG REQUIRED)
+
+sigfn provides the following targets:
+
+    # for shared library
+    target_link_libraries(main PRIVATE sigfn::sigfn)
+
+    # for static library
+    target_link_libraries(main PRIVATE sigfn::sigfn_a)

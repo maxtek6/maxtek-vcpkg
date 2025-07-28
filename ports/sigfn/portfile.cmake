@@ -17,3 +17,17 @@ vcpkg_cmake_install()
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 
 vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE")
+
+install(TARGETS sigfn sigfn_a
+    EXPORT sigfn-targets
+    RUNTIME DESTINATION "${CURRENT_PACKAGES_DIR}/bin"
+    ARCHIVE DESTINATION "${CURRENT_PACKAGES_DIR}/lib"
+    LIBRARY DESTINATION "${CURRENT_PACKAGES_DIR}/lib"
+    INCLUDES DESTINATION "${CURRENT_PACKAGES_DIR}/include"
+)
+
+install(EXPORT sigfn-targets
+    FILE sigfn-targets.cmake
+    NAMESPACE sigfn::
+    DESTINATION "${CURRENT_PACKAGES_DIR}/share/sigfn"
+)
