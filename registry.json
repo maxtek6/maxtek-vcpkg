@@ -1,4 +1,4 @@
 {
   "name": "maxtek-vcpkg",
-  "baseline": "default-baseline"
+  "baseline": "master-baseline"
 }
